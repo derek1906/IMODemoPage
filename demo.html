@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<title>IMO Demo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<script src="main.js"></script>
+
+		<!-- fonts -->
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<img id="logo" src="IMOLogo.svg">
+			</div>
+			<div id="content" ng-app="imo-demo" ng-controller="main">
+
+				<div class="card">
+					<div class="card-header">
+						<img class="person-photo" src="https://placehold.it/150x200">
+						<div class="person-description">
+							<span class="person-info-field">John Doe</span>
+							<span class="person-info-field">123 Fake Street</span>
+							<span class="person-info-field">1/1/1970</span>
+							<span class="person-info-field">Male</span>
+						</div>
+					</div>
+					<div class="card-body">
+						<table class="dosage-table table table-striped">
+							<thead>
+								<tr>
+									<th ng-repeat="key in keys">{{ key }}</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="entry in entries">
+									<td ng-repeat="data in entry">{{ data }}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>
